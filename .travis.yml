@@ -4,3 +4,5 @@ node_js:
 install: make install
 script:
   - make lint
+env:
+  CODECLIMATE_REPO_TOKEN: 8796ae917a352dcf353ef0317714e1b673cd8390d5b74a9bf61643e3cc8aed55
