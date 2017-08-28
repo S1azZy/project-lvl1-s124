@@ -1,5 +1,6 @@
 {
   "name": "brain_games",
+<<<<<<< HEAD
   "version": "0.0.1",
   "description": "my first hexlet project",
   "main": "dist/index.js",
@@ -11,11 +12,19 @@
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublish": "npm run build"
+=======
+  "version": "1.0.0",
+  "description": "my first hexlet project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+>>>>>>> 1c9adb5ff070e185a26a43bc65eeea65f185dcda
   },
   "author": "SlazZy",
   "license": "ISC",
   "keywords": [],
   "devDependencies": {
+<<<<<<< HEAD
     "babel-cli": "*",
     "babel-core": "*",
     "babel-preset-env": "*",
@@ -29,4 +38,11 @@
     "url": "https://github.com/S1azZy/project-lvl1-s124/issues"
   },
   "homepage": "https://github.com/S1azZy/project-lvl1-s124#readme"
+=======
+    "babel-cli": "latest",
+    "babel-core": "latest",
+    "babel-preset-env": "latest",
+    "babel-preset-stage-0": "latest"
+  }
+>>>>>>> 1c9adb5ff070e185a26a43bc65eeea65f185dcda
 }
