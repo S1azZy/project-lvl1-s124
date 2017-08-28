@@ -2,7 +2,7 @@
   "name": "slazzy_brain_games",
   "version": "0.0.1",
   "description": "my first hexlet project",
-  "main": "dist/index.js",
+  "main": "src/brain-games.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
