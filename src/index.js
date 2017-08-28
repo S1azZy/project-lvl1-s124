@@ -2,20 +2,27 @@ import readlineSync from 'readline-sync';
 
 const hello = () => console.log('Welcome to the Brain Games!');
 
-const askName = () => {
+const CORRECT_ANS_TO_WIN = 3;
+
+const getName = () => {
   const username = readlineSync.question('May I have your name? ');
   console.log(`\nHello, ${username}!`);
   return username;
 };
 
+const getAns = () => readlineSync.question('Your answer: ');
+
 const brainGames = () => {
   hello();
-  askName();
+  getName();
 };
 
 const brainEven = () => {
   hello();
-  const username = askName();
+  console.log('Answer "yes" if number even otherwise answer "no".');
+  const username = getName();
+
+  const correctAnswers = 0;
 };
 
 
