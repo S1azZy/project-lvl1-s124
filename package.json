@@ -4,7 +4,8 @@
   "description": "my first hexlet project",
   "main": "dist/index.js",
   "bin": {
-    "brain-games": "dist/index.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

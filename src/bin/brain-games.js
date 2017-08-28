@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import askQuestion from '..';
+import { brainGames } from '..';
 
-console.log('Welcome to the Brain Games!');
-askQuestion();
+brainGames();
