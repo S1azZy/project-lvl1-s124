@@ -1,10 +1,10 @@
 {
   "name": "slazzy_brain_games",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "my first hexlet project",
-  "main": "src/brain-games.js",
+  "main": "dist/index.js",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,11 +15,15 @@
   "author": "SlazZy",
   "license": "ISC",
   "keywords": [],
+  "Dependencies": {
+    "readline-sync": "*"
+  },
   "devDependencies": {
     "babel-cli": "*",
     "babel-core": "*",
     "babel-preset-env": "*",
-    "babel-preset-stage-0": "*"
+    "babel-preset-stage-0": "*",
+    "readline-sync": "*"
   },
   "repository": {
     "type": "git",
