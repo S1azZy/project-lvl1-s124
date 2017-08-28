@@ -1,5 +1,5 @@
 {
-  "name": "brain_games",
+  "name": "slazzy_brain_games",
   "version": "0.0.1",
   "description": "my first hexlet project",
   "main": "dist/index.js",
@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel-node": "babel-node",
-    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "build": "set NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublish": "npm run build"
   },
   "author": "SlazZy",
