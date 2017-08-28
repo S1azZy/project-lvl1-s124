@@ -16,7 +16,7 @@
   "license": "ISC",
   "keywords": [],
   "Dependencies": {
-    "readline-sync": "*"
+    "readline-sync": "latest"
   },
   "devDependencies": {
     "babel-cli": "*",
