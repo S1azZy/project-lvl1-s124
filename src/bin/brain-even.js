@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import BrainEven from '../games/brainEven';
+import game from '../games/brainEven';
 
-const game = new BrainEven();
-game.playGame();
+game();

@@ -1,7 +1,5 @@
 import { cons, car, cdr } from 'hexlet-pairs';
-import { getAns, getRandomInt } from '..';
-import Game from './game';
-
+import { getRandomInt, gameEngine } from '..';
 
 const getOperation = (num) => {
   switch (num) {
@@ -18,33 +16,16 @@ const getOperation = (num) => {
 
 const getRandomOperation = () => getOperation(getRandomInt(1, 3));
 
-export default class BrainCalc extends Game {
-  constructor() {
-    super('brainCalc');
-    this.countCorrectAnswersToWin = 3;
-  }
-
-  playGame() {
-    Game.hello();
-    this.username = this.getName();
-    console.log('What is the result of the expression?\n');
-    let countCorrectAnswers = 0;
-
-    while (countCorrectAnswers < this.countCorrectAnswersToWin) {
-      const num1 = getRandomInt(1, 100);
-      const num2 = getRandomInt(1, 100);
-      const operation = getRandomOperation();
-      console.log(`Question: ${num1} ${car(operation)} ${num2}`);
-      const correctAnswer = cdr(operation(num1, num2));
-      const currentAnswer = getAns();
-
-      if (String(currentAnswer) === String(correctAnswer)) {
-        countCorrectAnswers += 1;
-      } else {
-        console.log(`'${currentAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-        return;
-      }
-    }
-    this.congratulations();
-  }
-}
+export default () => {
+  const startMassage = 'What is the result of the expression?\n';
+  const countCorrectAnswersToWin = 3;
+  const rules = () => {
+    const num1 = getRandomInt(1, 100);
+    const num2 = getRandomInt(1, 100);
+    const operation = getRandomOperation();
+    const question = `${num1} ${car(operation)} ${num2}`;
+    const correctAnswer = cdr(operation(num1, num2));
+    return cons(question, correctAnswer);
+  };
+  gameEngine(startMassage, rules, countCorrectAnswersToWin);
+};

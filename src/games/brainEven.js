@@ -1,32 +1,12 @@
-import { getAns, getRandomInt } from '..';
-import Game from './game';
+import { cons } from 'hexlet-pairs';
+import { getRandomInt, gameEngine } from '..';
 
-export default class BrainEven extends Game {
-  constructor() {
-    super('brainEven');
-    this.countCorrectAnswersToWin = 3;
-  }
-
-  playGame() {
-    Game.hello();
-    this.username = this.getName();
-    console.log('Answer "yes" if number even otherwise answer "no".\n');
-    let countCorrectAnswers = 0;
-    let question = 0;
-
-    while (countCorrectAnswers < this.countCorrectAnswersToWin) {
-      question = getRandomInt(1, 100);
-      const correctAnswer = question % 2 === 0 ? 'yes' : 'no';
-      console.log(`Question: ${question}`);
-      const currentAnswer = getAns();
-
-      if (currentAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
-        countCorrectAnswers += 1;
-      } else {
-        console.log(`'${currentAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-        return;
-      }
-    }
-    this.congratulations();
-  }
-}
+export default () => {
+  const startMassage = 'Answer "yes" if number even otherwise answer "no".\n';
+  const countCorrectAnswersToWin = 3;
+  const rules = () => {
+    const num = getRandomInt(1, 100);
+    return cons(num, num % 2 === 0 ? 'yes' : 'no');
+  };
+  gameEngine(startMassage, rules, countCorrectAnswersToWin);
+};
