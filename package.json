@@ -1,6 +1,6 @@
 {
   "name": "slazzy_brain_games",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "my first hexlet project",
   "main": "dist/index.js",
   "bin": {
