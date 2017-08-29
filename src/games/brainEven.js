@@ -10,7 +10,7 @@ export default class BrainEven extends Game {
   playGame() {
     Game.hello();
     this.username = this.getName();
-    console.log('Answer "yes" if number even otherwise answer "no".');
+    console.log('Answer "yes" if number even otherwise answer "no".\n');
     let countCorrectAnswers = 0;
     let question = 0;
 

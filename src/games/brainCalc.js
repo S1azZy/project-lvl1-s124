@@ -27,7 +27,7 @@ export default class BrainCalc extends Game {
   playGame() {
     Game.hello();
     this.username = this.getName();
-    console.log('What is the result of the expression?');
+    console.log('What is the result of the expression?\n');
     let countCorrectAnswers = 0;
 
     while (countCorrectAnswers < this.countCorrectAnswersToWin) {

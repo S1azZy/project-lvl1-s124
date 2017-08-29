@@ -18,7 +18,7 @@ class Game {
 
   getName() {
     this.username = readlineSync.question('May I have your name? ');
-    console.log(`\nHello, ${this.username}!`);
+    console.log(`Hello, ${this.username}!\n`);
     return this.username;
   }
 
