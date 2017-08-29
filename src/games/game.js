@@ -8,7 +8,7 @@ class Game {
   }
 
   playGame() {
-    this.hello();
+    Game.hello();
     this.username = getName();
   }
 
@@ -19,6 +19,7 @@ class Game {
   getName() {
     this.username = readlineSync.question('May I have your name? ');
     console.log(`\nHello, ${this.username}!`);
+    return this.username;
   }
 
   congratulations() {
