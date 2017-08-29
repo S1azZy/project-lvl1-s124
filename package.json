@@ -18,7 +18,8 @@
   "license": "ISC",
   "keywords": [],
   "dependencies": {
-    "readline-sync": "latest"
+    "readline-sync": "latest",
+    "hexlet-pairs": "latest"
   },
   "devDependencies": {
     "babel-cli": "*",
