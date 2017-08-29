@@ -24,7 +24,7 @@ export default () => {
     const num2 = getRandomInt(1, 100);
     const operation = getRandomOperation();
     const question = `${num1} ${car(operation)} ${num2}`;
-    const correctAnswer = cdr(operation(num1, num2));
+    const correctAnswer = cdr(operation)(num1, num2);
     return cons(question, correctAnswer);
   };
   gameEngine(startMassage, rules, countCorrectAnswersToWin);
