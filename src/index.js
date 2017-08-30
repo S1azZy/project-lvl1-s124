@@ -16,7 +16,7 @@ const gameEngine = (startMassage, rules, countCorrectAnswersToWin = 3) => {
   while (countCorrectAnswers < countCorrectAnswersToWin) {
     const result = rules();
     console.log(`Question: ${car(result)}`);
-    const correctAnswer = cdr(result).toString();
+    const correctAnswer = cdr(result);
     const currentAnswer = getAns();
     if (currentAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
       countCorrectAnswers += 1;

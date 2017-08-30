@@ -15,7 +15,7 @@ export default () => {
     const num1 = getRandomInt(1, 100);
     const num2 = getRandomInt(1, 100);
     const question = `${num1} ${num2}`;
-    const correctAnswer = gcd(num1, num2);
+    const correctAnswer = gcd(num1, num2).toString();
     return cons(question, correctAnswer);
   };
   gameEngine(startMassage, rules);
