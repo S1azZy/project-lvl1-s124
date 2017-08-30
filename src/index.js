@@ -1,7 +1,6 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
 
-const getRandomInt = (min, max) => Math.floor(Math.random() * ((max - min) + 1)) + min;
 const getName = () => readlineSync.question('May I have your name? ');
 const getAns = () => readlineSync.question('Your answer: ');
 
@@ -29,4 +28,4 @@ const gameEngine = (startMassage, rules, countCorrectAnswersToWin = 3) => {
 };
 
 
-export { getRandomInt, gameEngine };
+export default gameEngine;

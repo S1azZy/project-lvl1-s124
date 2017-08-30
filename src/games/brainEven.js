@@ -1,5 +1,6 @@
 import { cons } from 'hexlet-pairs';
-import { getRandomInt, gameEngine } from '..';
+import gameEngine from '..';
+import getRandomInt from '../tools/getRandomInt';
 
 export default () => {
   const startMassage = 'Answer "yes" if number even otherwise answer "no".\n';

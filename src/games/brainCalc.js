@@ -1,5 +1,6 @@
 import { cons, car, cdr } from 'hexlet-pairs';
-import { getRandomInt, gameEngine } from '..';
+import gameEngine from '..';
+import getRandomInt from '../tools/getRandomInt';
 
 const getOperation = (num) => {
   switch (num) {
