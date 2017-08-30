@@ -18,7 +18,6 @@ const getRandomOperation = () => getOperation(getRandomInt(1, 3));
 
 export default () => {
   const startMassage = 'What is the result of the expression?\n';
-  const countCorrectAnswersToWin = 3;
   const rules = () => {
     const num1 = getRandomInt(1, 100);
     const num2 = getRandomInt(1, 100);
@@ -27,5 +26,5 @@ export default () => {
     const correctAnswer = cdr(operation)(num1, num2);
     return cons(question, correctAnswer);
   };
-  gameEngine(startMassage, rules, countCorrectAnswersToWin);
+  gameEngine(startMassage, rules);
 };

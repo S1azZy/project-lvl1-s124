@@ -5,7 +5,7 @@ const getRandomInt = (min, max) => Math.floor(Math.random() * ((max - min) + 1))
 const getName = () => readlineSync.question('May I have your name? ');
 const getAns = () => readlineSync.question('Your answer: ');
 
-const gameEngine = (startMassage, rules, countToWin) => {
+const gameEngine = (startMassage, rules, countCorrectAnswersToWin = 3) => {
   console.log('Welcome to the Brain Games!');
   console.log(startMassage);
   const username = getName();
@@ -13,7 +13,7 @@ const gameEngine = (startMassage, rules, countToWin) => {
 
   let countCorrectAnswers = 0;
 
-  while (countCorrectAnswers < countToWin) {
+  while (countCorrectAnswers < countCorrectAnswersToWin) {
     const result = rules();
     console.log(`Question: ${car(result)}`);
     const correctAnswer = cdr(result).toString();
