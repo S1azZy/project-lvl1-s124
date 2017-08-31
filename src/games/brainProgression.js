@@ -8,7 +8,7 @@ const makeProgression = () => {
   const startNumber = getRandomInt(0, 100);
   const step = getRandomInt(1, 100);
   const arr = [];
-  for (let i = 1; i < progressionLength; i += 1) {
+  for (let i = 0; i < progressionLength; i += 1) {
     arr.push(startNumber + (step * i));
   }
   return arr.map(String);
@@ -19,7 +19,7 @@ export default () => {
   const rules = () => {
     const progression = makeProgression();
     const position = getRandomInt(0, progressionLength - 1);
-    const correctAnswer = progression[position].toString();
+    const correctAnswer = progression[position];
     progression[position] = '..';
     const question = progression.join(' ');
 
