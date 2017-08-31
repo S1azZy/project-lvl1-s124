@@ -19,7 +19,7 @@ export default () => {
   const rules = () => {
     const progression = makeProgression();
     const position = getRandomInt(0, progressionLength - 1);
-    const correctAnswer = progression[position];
+    const correctAnswer = progression[position].toString();
     progression[position] = '..';
     const question = progression.join(' ');
 
